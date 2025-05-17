@@ -2,8 +2,8 @@ server:
   port: 8088
 
 spring:  #config server configuration
-  profiles:
-    active: default
+  application:
+    name: post-config-server
   cloud:
     config:
       server:
