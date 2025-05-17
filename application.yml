@@ -4,16 +4,12 @@ server:
 spring:  #config server configuration
   application:
     name: post-config-server
-  instance:
-    instance-id: ${spring.application.name}:${server.port}
   cloud:
     config:
       server:
         git:
           uri: https://github.com/venkatram64/my-config-server-data-in-git.git
-          search-paths: config
-          clone-on-start: true
-          default-label: main
-  output:
-    ansi:
-      enabled: always
+          search-paths: config  # Correct for your directory structure
+          clone-on-start: true   # Ensures config is pulled on startup
+          default-label: main    # Default git branch
+          force-pull: true       # Recommended to get latest changes
