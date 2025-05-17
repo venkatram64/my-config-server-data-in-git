@@ -1,0 +1,19 @@
+server:
+  port: 8088
+
+spring:  #config server configuration
+  application:
+    name: post-config-server
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/your-username/post-config-repo.git
+          search-paths: config
+          clone-on-start: true
+          default-label: main
+  output:
+    ansi:
+      enabled: always
