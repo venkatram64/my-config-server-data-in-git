@@ -10,7 +10,7 @@ spring:  #config server configuration
     config:
       server:
         git:
-          uri: https://github.com/your-username/post-config-repo.git
+          uri: https://github.com/venkatram64/my-config-server-data-in-git.git
           search-paths: config
           clone-on-start: true
           default-label: main
