@@ -13,3 +13,8 @@ spring:  #config server configuration
           clone-on-start: true   # Ensures config is pulled on startup
           default-label: main    # Default git branch
           force-pull: true       # Recommended to get latest changes
+
+logging:
+  level:
+    org.springframework.cloud.config: DEBUG
+    org.springframework.boot.context.config: TRACE
